@@ -1,0 +1,516 @@
+#A_1 {
+    box-sizing: border-box;
+    color: rgb(22, 107, 192);
+    display: block;
+    height: 40px;
+    min-height: auto;
+    min-width: auto;
+    text-decoration: none solid rgb(22, 107, 192);
+    text-size-adjust: 100%;
+    width: 176px;
+    column-rule-color: rgb(22, 107, 192);
+    perspective-origin: 88px 20px;
+    transform-origin: 88px 20px;
+    user-select: none;
+    caret-color: rgb(22, 107, 192);
+    background: rgba(0, 0, 0, 0) none no-repeat scroll 0% 0% / cover padding-box border-box;
+    border: 0px none rgb(22, 107, 192);
+    font: normal normal 500 normal 16px / 24px aktiv-grotesk-std;
+    margin: 0px 32px 0px 20px;
+    outline: rgb(22, 107, 192) none 0px;
+}/*#A_1*/
+
+#A_1:after {
+    color: rgb(22, 107, 192);
+    min-height: auto;
+    min-width: auto;
+    text-decoration: none solid rgb(22, 107, 192);
+    text-size-adjust: 100%;
+    column-rule-color: rgb(22, 107, 192);
+    user-select: none;
+    caret-color: rgb(22, 107, 192);
+    border: 0px none rgb(22, 107, 192);
+    font: normal normal 500 normal 16px / 24px aktiv-grotesk-std;
+    outline: rgb(22, 107, 192) none 0px;
+}/*#A_1:after*/
+
+#A_1:before {
+    color: rgb(22, 107, 192);
+    content: url("data:image/svg+xml;charset=utf-8,%3Csvg width='176' height='40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Cpath d='M19.849.3L0 20.15 19.849 40l4.49-4.49L8.98 20.15 24.34 4.79 19.85.3z' fill='%23008CD2'/%3E%3Cpath d='M48.679 20.15L28.828.3l-4.487 4.49L39.7 20.15 24.337 35.51l4.49 4.49 19.851-19.85' fill='%237DBE0F'/%3E%3Cpath d='M24.34 4.79L8.98 20.15l15.358 15.36L39.7 20.15 24.34 4.79m35.088 16.277c.54.253 1.626.706 2.13.918 3.038 1.281 3.77 2.508 3.77 4.346 0 2.469-1.819 4.192-4.423 4.192-2.766 0-4.505-2.06-4.874-5.773h-.962v3.323c0 1.1-.058 2.316-.137 2.902h.815c.21-.319.42-.42.775-.42.285 0 .67.127 1.158.29.86.287 2.037.678 3.583.678 4.107 0 6.866-2.593 6.866-6.45 0-3.965-2.254-5.203-5.969-6.766-2.758-1.173-4.318-1.945-4.318-4.232 0-2.335 1.634-3.903 4.065-3.903 2.568 0 4.212 1.832 4.49 5.065h.862V12.72c0-.832.091-2.193.168-2.773h-.846c-.105.162-.348.452-.733.452-.389 0-.947-.31-1.335-.487-.438-.201-1.443-.642-3.097-.642-3.634 0-6.184 2.509-6.184 5.966 0 2.629 1.333 4.483 4.196 5.83zm27.054-3.796v2.188c1.995-1.335 3.58-2.029 4.914-2.029 1.486 0 2.598.727 3.232 2.155 2.123-1.46 3.869-2.155 5.198-2.155 2.697 0 3.552 1.901 3.552 5.832v1.618c0 1.299 0 3.044-.094 5.264l1.618.189v.635H98.97v-.635l1.806-.221c.162-1.428.195-3.202.195-5.327 0-4.06-.195-5.865-2.666-5.865-.887 0-2.061.411-3.485 1.333.123 1.107.156 2.343.156 3.708v6.183l1.682.189v.635h-5.899v-.635l1.71-.221c.099-1.459.099-3.235.099-5.327 0-4.122-.255-5.865-2.696-5.865-.89 0-2.062.411-3.39 1.299v6.878c0 1.143 0 2.19.09 3.047l1.872.189v.635H82.07v-.635l1.874-.189c.064-.857.126-1.871.126-3.047v-5.8c0-1.109-.062-2.093-.126-3.01l-1.967-.098.093-.634 4.412-.284m20.287-2.778l-1.785 3.686h-.566l.376-3.686h1.975m-.409 6.475c0 1.71.864 2.914 2.72 3.791l.997.432c.895.372 1.665.695 2.172 1.293.351.408.522.906.522 1.527 0 1.513-1.115 2.569-2.714 2.569-1.724 0-2.76-1.227-2.996-3.545l-.012-.12h-.792v2.204c0 .704-.028 1.29-.083 1.787l-.016.152h.678l.04-.06c.103-.154.206-.207.398-.207.166 0 .404.08.705.18.552.183 1.307.436 2.306.436 2.667 0 4.458-1.685 4.458-4.192 0-2.577-1.457-3.376-3.855-4.386-1.76-.748-2.68-1.203-2.68-2.598 0-1.45.976-2.384 2.485-2.384 1.578 0 2.58 1.127 2.753 3.093l.012.123h.73v-1.692c0-.525.03-1.066.102-1.705l.017-.152h-.695l-.043.06c-.11.164-.233.227-.438.227-.123 0-.318-.084-.568-.191-.492-.208-1.24-.528-2.237-.528-2.299 0-3.966 1.633-3.966 3.886m-36.084-.193c.07-2.163 2.072-3.696 4.943-3.696 3.01 0 4.314 1.555 4.314 4.82v.508l-.142 4.69c0 1.143 0 2.19.096 3.047l1.87.189v.635h-4.29l-.072-1.394c-1.456 1.077-2.914 1.553-4.374 1.553-1.964 0-3.234-1.236-3.234-3.046 0-2.536 2.535-4.11 7.672-4.775l.096-2.453v-.348c0-1.935-.793-2.743-2.536-2.743-1.48 0-2.315.682-2.315 1.57 0 .526.102.779.102 1.444 0 .65-.431 1.064-1.066 1.064-.664 0-1.064-.477-1.064-1.064v-.001zm6.688 7.34c0-1.302.03-2.646.095-4.168-3.74.538-5.485 1.537-5.485 3.629 0 1.424.922 2.377 2.376 2.377.984 0 1.936-.398 3.014-1.064v-.775zm68.767-1.018c0 1.143 0 2.19.092 3.047l1.871.189v.635h-6.374v-.635l1.874-.189c.063-.857.127-1.871.127-3.047V13.688c0-1.11-.064-2.093-.127-3.011l-1.967-.095.093-.634 4.411-.285v17.434m4.031-5.802c0-1.11-.063-2.09-.128-3.012l-1.967-.094.096-.634 4.409-.284v6.468c0 4.12.253 5.898 2.694 5.898.89 0 2.063-.446 3.39-1.332v-7.01c0-1.11-.061-2.09-.127-3.012l-1.964-.094.091-.634 4.412-.284v9.954c0 1.11.055 1.997.12 2.914l1.88.194v.632h-4.335l-.076-1.9c-1.995 1.331-3.578 2.062-4.917 2.062-1.279 0-3.578-.64-3.578-4.585v-5.247m16.877 5.195c0 1.336 0 2.362.063 3.317.266.097 1.036.408 1.957.408 2.608 0 4.544-2.104 4.544-5.784 0-3.458-1.77-5.78-4.401-5.78-.779 0-1.775.369-2.163.584v7.255zm2.48-9.098c.489-.214.887-.305 1.254-.305 3.08 0 5.488 3.095 5.488 6.578 0 4.47-3.288 7.46-7.124 7.46-2.283 0-4.248-.725-4.647-.855.06-.709.136-1.82.136-3.529V14.26c0-1.735-.102-3.194-.126-3.582l-1.966-.095.093-.634c1.093-.07 3.507-.215 4.412-.291v8.806l2.48-1.071zm-28.903 7.355c-.631 2.926-2.858 6.77-7.642 6.77-6.215 0-10.406-4.607-10.406-11.124 0-6.25 3.963-11.122 10.406-11.122 3.214 0 4.41 1.178 5.345 1.178.565 0 .774-.34.843-.501h.846c-.04.246-.17 1.199-.17 2.319v2.967h-.811c-.559-2.77-2.334-5.062-5.772-5.062-4.614 0-6.929 4.731-6.929 10.221 0 5.11 1.967 10.08 6.93 10.08 4.161 0 5.792-3.475 6.384-5.726h.976' fill='%23005291'/%3E%3C/g%3E%3C/svg%3E");
+    text-decoration: none solid rgb(22, 107, 192);
+    text-size-adjust: 100%;
+    column-rule-color: rgb(22, 107, 192);
+    perspective-origin: 0px 0px;
+    transform-origin: 0px 0px;
+    user-select: none;
+    caret-color: rgb(22, 107, 192);
+    border: 0px none rgb(22, 107, 192);
+    font: normal normal 500 normal 16px / 24px aktiv-grotesk-std;
+    outline: rgb(22, 107, 192) none 0px;
+}/*#A_1:before*/
+
+#INPUT_1 {
+    color: rgba(66, 66, 66, 0.8);
+    height: 40px;
+    text-align: left;
+    text-decoration: none solid rgba(66, 66, 66, 0.8);
+    text-size-adjust: 100%;
+    unicode-bidi: isolate;
+    width: 556.375px;
+    column-rule-color: rgba(66, 66, 66, 0.8);
+    perspective-origin: 278.188px 20px;
+    transform-origin: 278.188px 20px;
+    caret-color: rgba(66, 66, 66, 0.8);
+    background: rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box;
+    border: 1px solid rgba(66, 66, 66, 0.2);
+    border-radius: 100px 100px 100px 100px;
+    font: normal normal 400 normal 15px / 22.5px aktiv-grotesk-std;
+    outline: rgba(66, 66, 66, 0.8) none 0px;
+    padding: 5px 36px 5px 14px;
+    transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
+}/*#INPUT_1*/
+
+#INPUT_1:after {
+    color: rgba(66, 66, 66, 0.8);
+    text-align: left;
+    text-decoration: none solid rgba(66, 66, 66, 0.8);
+    text-size-adjust: 100%;
+    column-rule-color: rgba(66, 66, 66, 0.8);
+    caret-color: rgba(66, 66, 66, 0.8);
+    border: 0px none rgba(66, 66, 66, 0.8);
+    font: normal normal 400 normal 15px / 22.5px aktiv-grotesk-std;
+    outline: rgba(66, 66, 66, 0.8) none 0px;
+}/*#INPUT_1:after*/
+
+#INPUT_1:before {
+    color: rgba(66, 66, 66, 0.8);
+    text-align: left;
+    text-decoration: none solid rgba(66, 66, 66, 0.8);
+    text-size-adjust: 100%;
+    column-rule-color: rgba(66, 66, 66, 0.8);
+    caret-color: rgba(66, 66, 66, 0.8);
+    border: 0px none rgba(66, 66, 66, 0.8);
+    font: normal normal 400 normal 15px / 22.5px aktiv-grotesk-std;
+    outline: rgba(66, 66, 66, 0.8) none 0px;
+}/*#INPUT_1:before*/
+
+#DIV_1 {
+    bottom: 0px;
+    box-sizing: border-box;
+    color: rgb(66, 66, 66);
+    height: 32px;
+    left: 0px;
+    min-height: auto;
+    min-width: auto;
+    position: relative;
+    right: 0px;
+    text-decoration: none solid rgb(66, 66, 66);
+    text-size-adjust: 100%;
+    text-overflow: ellipsis;
+    top: 0px;
+    white-space: nowrap;
+    width: 82.2656px;
+    column-rule-color: rgb(66, 66, 66);
+    perspective-origin: 41.125px 16px;
+    transform-origin: 41.125px 16px;
+    caret-color: rgb(66, 66, 66);
+    border: 0px none rgb(66, 66, 66);
+    font: normal normal 200 normal 14px / 16px aktiv-grotesk-std;
+    outline: rgb(66, 66, 66) none 0px;
+}/*#DIV_1*/
+
+#DIV_1:after {
+    color: rgb(66, 66, 66);
+    min-height: auto;
+    min-width: auto;
+    text-decoration: none solid rgb(66, 66, 66);
+    text-size-adjust: 100%;
+    white-space: nowrap;
+    column-rule-color: rgb(66, 66, 66);
+    caret-color: rgb(66, 66, 66);
+    border: 0px none rgb(66, 66, 66);
+    font: normal normal 200 normal 14px / 16px aktiv-grotesk-std;
+    outline: rgb(66, 66, 66) none 0px;
+}/*#DIV_1:after*/
+
+#DIV_1:before {
+    color: rgb(66, 66, 66);
+    min-height: auto;
+    min-width: auto;
+    text-decoration: none solid rgb(66, 66, 66);
+    text-size-adjust: 100%;
+    white-space: nowrap;
+    column-rule-color: rgb(66, 66, 66);
+    caret-color: rgb(66, 66, 66);
+    border: 0px none rgb(66, 66, 66);
+    font: normal normal 200 normal 14px / 16px aktiv-grotesk-std;
+    outline: rgb(66, 66, 66) none 0px;
+}/*#DIV_1:before*/
+
+#DIV_2 {
+    bottom: 0px;
+    box-sizing: border-box;
+    color: rgb(66, 66, 66);
+    height: 16px;
+    left: 0px;
+    position: relative;
+    right: 0px;
+    text-decoration: none solid rgb(66, 66, 66);
+    text-size-adjust: 100%;
+    top: 0px;
+    white-space: nowrap;
+    width: 82.2656px;
+    column-rule-color: rgb(66, 66, 66);
+    perspective-origin: 41.125px 8px;
+    transform-origin: 41.125px 8px;
+    caret-color: rgb(66, 66, 66);
+    border: 0px none rgb(66, 66, 66);
+    font: normal normal 200 normal 14px / 16px aktiv-grotesk-std;
+    outline: rgb(66, 66, 66) none 0px;
+}/*#DIV_2*/
+
+#DIV_2:after {
+    color: rgb(66, 66, 66);
+    text-decoration: none solid rgb(66, 66, 66);
+    text-size-adjust: 100%;
+    white-space: nowrap;
+    column-rule-color: rgb(66, 66, 66);
+    caret-color: rgb(66, 66, 66);
+    border: 0px none rgb(66, 66, 66);
+    font: normal normal 200 normal 14px / 16px aktiv-grotesk-std;
+    outline: rgb(66, 66, 66) none 0px;
+}/*#DIV_2:after*/
+
+#DIV_2:before {
+    color: rgb(66, 66, 66);
+    text-decoration: none solid rgb(66, 66, 66);
+    text-size-adjust: 100%;
+    white-space: nowrap;
+    column-rule-color: rgb(66, 66, 66);
+    caret-color: rgb(66, 66, 66);
+    border: 0px none rgb(66, 66, 66);
+    font: normal normal 200 normal 14px / 16px aktiv-grotesk-std;
+    outline: rgb(66, 66, 66) none 0px;
+}/*#DIV_2:before*/
+
+#DIV_3 {
+    bottom: -50px;
+    box-sizing: border-box;
+    color: rgb(66, 66, 66);
+    display: none;
+    left: 0px;
+    position: absolute;
+    right: 0px;
+    text-decoration: none solid rgb(66, 66, 66);
+    text-size-adjust: 100%;
+    top: 0px;
+    white-space: nowrap;
+    z-index: 1;
+    column-rule-color: rgb(66, 66, 66);
+    caret-color: rgb(66, 66, 66);
+    border: 0px none rgb(66, 66, 66);
+    font: normal normal 200 normal 14px / 16px aktiv-grotesk-std;
+    outline: rgb(66, 66, 66) none 0px;
+}/*#DIV_3*/
+
+#DIV_3:after {
+    color: rgb(66, 66, 66);
+    text-decoration: none solid rgb(66, 66, 66);
+    text-size-adjust: 100%;
+    white-space: nowrap;
+    column-rule-color: rgb(66, 66, 66);
+    caret-color: rgb(66, 66, 66);
+    border: 0px none rgb(66, 66, 66);
+    font: normal normal 200 normal 14px / 16px aktiv-grotesk-std;
+    outline: rgb(66, 66, 66) none 0px;
+}/*#DIV_3:after*/
+
+#DIV_3:before {
+    color: rgb(66, 66, 66);
+    text-decoration: none solid rgb(66, 66, 66);
+    text-size-adjust: 100%;
+    white-space: nowrap;
+    column-rule-color: rgb(66, 66, 66);
+    caret-color: rgb(66, 66, 66);
+    border: 0px none rgb(66, 66, 66);
+    font: normal normal 200 normal 14px / 16px aktiv-grotesk-std;
+    outline: rgb(66, 66, 66) none 0px;
+}/*#DIV_3:before*/
+
+#DIV_4 {
+    bottom: 0px;
+    box-sizing: border-box;
+    color: rgb(66, 66, 66);
+    height: 16px;
+    left: 0px;
+    position: relative;
+    right: 0px;
+    text-decoration: none solid rgb(66, 66, 66);
+    text-size-adjust: 100%;
+    top: 0px;
+    white-space: nowrap;
+    width: 82.2656px;
+    z-index: 1;
+    column-rule-color: rgb(66, 66, 66);
+    perspective-origin: 41.125px 8px;
+    transform-origin: 41.125px 8px;
+    caret-color: rgb(66, 66, 66);
+    border: 0px none rgb(66, 66, 66);
+    font: normal normal 200 normal 14px / 16px aktiv-grotesk-std;
+    outline: rgb(66, 66, 66) none 0px;
+}/*#DIV_4*/
+
+#DIV_4:after {
+    color: rgb(66, 66, 66);
+    text-decoration: none solid rgb(66, 66, 66);
+    text-size-adjust: 100%;
+    white-space: nowrap;
+    column-rule-color: rgb(66, 66, 66);
+    caret-color: rgb(66, 66, 66);
+    border: 0px none rgb(66, 66, 66);
+    font: normal normal 200 normal 14px / 16px aktiv-grotesk-std;
+    outline: rgb(66, 66, 66) none 0px;
+}/*#DIV_4:after*/
+
+#DIV_4:before {
+    color: rgb(66, 66, 66);
+    text-decoration: none solid rgb(66, 66, 66);
+    text-size-adjust: 100%;
+    white-space: nowrap;
+    column-rule-color: rgb(66, 66, 66);
+    caret-color: rgb(66, 66, 66);
+    border: 0px none rgb(66, 66, 66);
+    font: normal normal 200 normal 14px / 16px aktiv-grotesk-std;
+    outline: rgb(66, 66, 66) none 0px;
+}/*#DIV_4:before*/
+
+#DIV_5 {
+    box-sizing: border-box;
+    color: rgb(66, 66, 66);
+    height: 16px;
+    text-decoration: none solid rgb(66, 66, 66);
+    text-size-adjust: 100%;
+    white-space: nowrap;
+    width: 82.2656px;
+    column-rule-color: rgb(66, 66, 66);
+    perspective-origin: 41.125px 8px;
+    transform-origin: 41.125px 8px;
+    caret-color: rgb(66, 66, 66);
+    border: 0px none rgb(66, 66, 66);
+    font: normal normal 200 normal 14px / 16px aktiv-grotesk-std;
+    outline: rgb(66, 66, 66) none 0px;
+}/*#DIV_5*/
+
+#DIV_5:after {
+    color: rgb(66, 66, 66);
+    text-decoration: none solid rgb(66, 66, 66);
+    text-size-adjust: 100%;
+    white-space: nowrap;
+    column-rule-color: rgb(66, 66, 66);
+    caret-color: rgb(66, 66, 66);
+    border: 0px none rgb(66, 66, 66);
+    font: normal normal 200 normal 14px / 16px aktiv-grotesk-std;
+    outline: rgb(66, 66, 66) none 0px;
+}/*#DIV_5:after*/
+
+#DIV_5:before {
+    color: rgb(66, 66, 66);
+    text-decoration: none solid rgb(66, 66, 66);
+    text-size-adjust: 100%;
+    white-space: nowrap;
+    column-rule-color: rgb(66, 66, 66);
+    caret-color: rgb(66, 66, 66);
+    border: 0px none rgb(66, 66, 66);
+    font: normal normal 200 normal 14px / 16px aktiv-grotesk-std;
+    outline: rgb(66, 66, 66) none 0px;
+}/*#DIV_5:before*/
+
+#DIV_6 {
+    bottom: 0px;
+    box-sizing: border-box;
+    color: rgb(66, 66, 66);
+    cursor: pointer;
+    height: 16px;
+    left: 0px;
+    position: relative;
+    right: 0px;
+    text-decoration: none solid rgb(66, 66, 66);
+    text-size-adjust: 100%;
+    top: 0px;
+    white-space: nowrap;
+    width: 82.2656px;
+    column-rule-color: rgb(66, 66, 66);
+    perspective-origin: 41.125px 8px;
+    transform-origin: 41.125px 8px;
+    caret-color: rgb(66, 66, 66);
+    border: 0px none rgb(66, 66, 66);
+    font: normal normal 200 normal 14px / 16px aktiv-grotesk-std;
+    outline: rgb(66, 66, 66) none 0px;
+    padding: 0px 20px 0px 0px;
+}/*#DIV_6*/
+
+#DIV_6:after {
+    bottom: 3px;
+    color: rgb(66, 66, 66);
+    content: '""';
+    cursor: pointer;
+    display: block;
+    height: 10px;
+    left: 70.2656px;
+    position: absolute;
+    right: 2px;
+    text-decoration: none solid rgb(66, 66, 66);
+    text-size-adjust: 100%;
+    top: 3px;
+    white-space: nowrap;
+    width: 10px;
+    column-rule-color: rgb(66, 66, 66);
+    perspective-origin: 5px 5px;
+    transform-origin: 5px 5px;
+    caret-color: rgb(66, 66, 66);
+    background: rgba(0, 0, 0, 0) url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='612' height='612'%3E%3Cpath d='M347.6 466l236.1-236.1c23.1-23.1 23.1-60.4 0-83.5s-60.4-23.1-83.5 0L305.9 340.7 111.5 146.4c-23.1-23.1-60.4-23.1-83.5 0-23 23-23 60.4 0 83.4L264.2 466c23 23 60.4 23 83.4 0z' fill='%23166BC0'/%3E%3C/svg%3E") no-repeat scroll 0% 0% / contain padding-box border-box;
+    border: 0px none rgb(66, 66, 66);
+    font: normal normal 200 normal 14px / normal aktiv-grotesk-std;
+    outline: rgb(66, 66, 66) none 0px;
+}/*#DIV_6:after*/
+
+#DIV_6:before {
+    color: rgb(66, 66, 66);
+    cursor: pointer;
+    text-decoration: none solid rgb(66, 66, 66);
+    text-size-adjust: 100%;
+    white-space: nowrap;
+    column-rule-color: rgb(66, 66, 66);
+    caret-color: rgb(66, 66, 66);
+    border: 0px none rgb(66, 66, 66);
+    font: normal normal 200 normal 14px / 16px aktiv-grotesk-std;
+    outline: rgb(66, 66, 66) none 0px;
+}/*#DIV_6:before*/
+
+#DIV_7 {
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 4px 0px;
+    box-sizing: border-box;
+    color: rgb(66, 66, 66);
+    display: none;
+    left: 150px;
+    max-height: 360px;
+    min-height: 136px;
+    position: absolute;
+    text-decoration: none solid rgb(66, 66, 66);
+    text-size-adjust: 100%;
+    top: 100%;
+    white-space: nowrap;
+    width: 328px;
+    z-index: 200;
+    column-rule-color: rgb(66, 66, 66);
+    caret-color: rgb(66, 66, 66);
+    background: rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box border-box;
+    border: 0px none rgb(66, 66, 66);
+    border-radius: 0 0 2px 2px;
+    font: normal normal 200 normal 14px / 16px aktiv-grotesk-std;
+    margin: 35px 0px 0px;
+    outline: rgb(66, 66, 66) none 0px;
+    padding: 0px 8px;
+}/*#DIV_7*/
+
+#DIV_7:after {
+    bottom: 100%;
+    color: rgb(66, 66, 66);
+    content: '""';
+    display: block;
+    height: 0px;
+    left: -215px;
+    pointer-events: none;
+    position: absolute;
+    right: 0px;
+    text-decoration: none solid rgb(66, 66, 66);
+    text-size-adjust: 100%;
+    white-space: nowrap;
+    width: 0px;
+    z-index: 200;
+    column-rule-color: rgb(66, 66, 66);
+    caret-color: rgb(66, 66, 66);
+    border-top: 13px solid rgba(0, 0, 0, 0);
+    border-right: 13px solid rgba(0, 0, 0, 0);
+    border-bottom: 13px solid rgba(255, 255, 255, 0.96);
+    border-left: 13px solid rgba(0, 0, 0, 0);
+    font: normal normal 200 normal 14px / 16px aktiv-grotesk-std;
+    margin: auto;
+    outline: rgb(66, 66, 66) none 0px;
+}/*#DIV_7:after*/
+
+#DIV_7:before {
+    bottom: 100%;
+    box-shadow: rgba(0, 0, 0, 0.1) 2px -2px 2px -1px;
+    color: rgb(66, 66, 66);
+    content: '""';
+    display: block;
+    height: 18px;
+    left: -215px;
+    pointer-events: none;
+    position: absolute;
+    right: 0px;
+    text-decoration: none solid rgb(66, 66, 66);
+    text-size-adjust: 100%;
+    white-space: nowrap;
+    width: 18px;
+    z-index: 100;
+    column-rule-color: rgb(66, 66, 66);
+    caret-color: rgb(66, 66, 66);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 0px solid rgba(0, 0, 0, 0.1);
+    border-left: 0px solid rgba(0, 0, 0, 0.1);
+    font: normal normal 200 normal 14px / 16px aktiv-grotesk-std;
+    margin: auto auto -9px;
+    outline: rgb(66, 66, 66) none 0px;
+}/*#DIV_7:before*/
+
+#DIV_8 {
+    box-sizing: border-box;
+    color: rgb(66, 66, 66);
+    height: 16px;
+    max-width: 112px;
+    text-decoration: none solid rgb(66, 66, 66);
+    text-size-adjust: 100%;
+    text-overflow: ellipsis;
+    text-transform: capitalize;
+    white-space: nowrap;
+    width: 82.2656px;
+    column-rule-color: rgb(66, 66, 66);
+    perspective-origin: 41.125px 8px;
+    transform-origin: 41.125px 8px;
+    caret-color: rgb(66, 66, 66);
+    border: 0px none rgb(66, 66, 66);
+    font: normal normal 500 normal 14px / 16px aktiv-grotesk-std;
+    outline: rgb(66, 66, 66) none 0px;
+    overflow: hidden;
+}/*#DIV_8*/
+
+#DIV_8:after {
+    color: rgb(66, 66, 66);
+    text-decoration: none solid rgb(66, 66, 66);
+    text-size-adjust: 100%;
+    text-transform: capitalize;
+    white-space: nowrap;
+    column-rule-color: rgb(66, 66, 66);
+    caret-color: rgb(66, 66, 66);
+    border: 0px none rgb(66, 66, 66);
+    font: normal normal 500 normal 14px / 16px aktiv-grotesk-std;
+    outline: rgb(66, 66, 66) none 0px;
+}/*#DIV_8:after*/
+
+#DIV_8:before {
+    color: rgb(66, 66, 66);
+    text-decoration: none solid rgb(66, 66, 66);
+    text-size-adjust: 100%;
+    text-transform: capitalize;
+    white-space: nowrap;
+    column-rule-color: rgb(66, 66, 66);
+    caret-color: rgb(66, 66, 66);
+    border: 0px none rgb(66, 66, 66);
+    font: normal normal 500 normal 14px / 16px aktiv-grotesk-std;
+    outline: rgb(66, 66, 66) none 0px;
+}/*#DIV_8:before*/
+
+
