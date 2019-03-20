@@ -34,12 +34,30 @@
         -webkit-transform:translate(0,-50%);
                 transform:translate(0,-50%);
     }
+    #email-label {
+    display: inline-block;
+    margin: 10px;
+    font-size: 20px;
+    }
+    #email-submit {
+    margin: 15px;
+    font-size: 15px;            
+    }
+    #email-input {
+    width: 30%;     
+        height: 20px;
+    }
     </style>
     
 </head>
 <body>
     <div id="chart"></div>
     <div id="question"><h1></h1></div>
+    <div style="position: relative; left: 100; top: 600px;">
+        <label id="email-label">Enter you email id to receive your gift : </label>
+        <input type="text" name="email" id="email-input" disabled/>
+        <button id="email-submit" margin-left="30px" disabled>Submit</button>
+    </div>
     
     <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <script type="text/javascript" charset="utf-8">
@@ -136,6 +154,7 @@
         container.on("click", spin);
         var show = false;
         function spin(d){
+            disableEmailInput(true);
             show = false;
             container.on("click", null);
             //all slices have been seen, all done
@@ -169,6 +188,10 @@
                     d3.select(".slice:nth-child(" + (picked + 1) + ") path");
 
                     blink();
+                
+                if (data[picked].value != 2) {
+                    disableEmailInput(false);
+                }
                 
 //                d3.select("#question h1").text(data[picked].question).transition()
 //                .delay(20).each("start", function() { d3.select(this).style("color", "green"); }).style("color", "red");
@@ -221,6 +244,12 @@
             .each("end", function() { if (show==true) blink(); })
         }
         
+        function disableEmailInput(disable)
+        {
+                document.getElementById("email-input").disabled = disable;
+                document.getElementById("email-submit").disabled = disable;
+        }
+        
         function getRandomNumbers(){
             var array = new Uint16Array(1000);
             var scale = d3.scale.linear().range([360, 1440]).domain([0, 100000]);
@@ -236,5 +265,8 @@
             return array;
         }
     </script>
+    
+    
+    
 </body>
 </html>
