@@ -612,10 +612,35 @@
     <a href="quiz.html" id="quiz-link" target="_blank">Click here!!</a>
 </div>
 
-    <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
- 
-<a href="https://twitter.com/intent/tweet?screen_name=TwitterDev&ref_src=twsrc%5Etfw" class="twitter-mention-button" data-show-count="false">Tweet to @TwitterDev</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>    
-    
+
+<center>
+    <div id="shareIcons" style="position: relative; left: 100; top: 500px;" hidden>
+        <h2>Congratulations!! Challenge your friends and let them know you won. Also earn points on every share.</h2>
+        <table>
+            <tr width="100%">
+                <td width="25%" align="center">
+                <img id="fb-img" onClick=postMsg(); src="facebook-logo.png"/>
+                    </td>
+                <td width="25%" align="center">
+                <div id="twitter-icon">
+                    <a href="https://twitter.com/intent/tweet?screen_name=TwitterDev&ref_src=twsrc%5Etfw" class="twitter-mention-button" data-text="Share &amp; Play Games @SamsClub. Check out all the games created by Sams Club and give your favourites a like to push them to victory! #contest #fun #share #play #games #freetoplay #earn #points #shop #redeem #samsclub" data-show-count="false">Tweet to @TwitterDev</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>    
+                </div>
+                    </td>
+                <td width="25%" align="center">
+                <div>
+                    <img id="instagram-logo" src="instagram-logo.png"/>
+                </div>
+                    </td>
+                <td width="25%" align="center">
+                <div>
+                    <img id="pinterest-logo" src="pinterest.png"/>
+                </div>
+                    </td>
+            </tr>
+        </table>
+    </div>
+    </center>
+
 <footer id="FOOTER_1">
 	<div id="FOOTER_DIV_2">
 		<div id="FOOTER_DIV_3">
@@ -805,6 +830,18 @@
 	</script>
 	<script type="text/javascript" id="SCRIPT_86">window.NREUM||(NREUM={});NREUM.info={"applicationID":"7979180","applicationTime":1488,"beacon":"bam.nr-data.net","queueTime":0,"licenseKey":"b8effb19d9","transactionName":"YwAEZhAFXhFXWhUIXlpKM0ALS0MDW0pOAlBGEUlRAxZETFxKEQ==","agent":"","errorBeacon":"bam.nr-data.net"}
 		</script>
+    
+    
+    <script>
+        function showShareIcons() {
+            document.getElementById("shareIcons").hidden=false;
+        }
+
+        function hideShareIcons() {
+            document.getElementById("shareIcons").hidden=true;
+        }
+    </script>
+    
 </footer>
 
 </center>

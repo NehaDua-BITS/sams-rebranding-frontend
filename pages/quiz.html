@@ -113,7 +113,7 @@ input.quizSubmit[type="submit"]:hover {
     top: 50%;
 }
 
-table {
+#ques-table {
   background-color: #F2F2F2;
       border:1px solid #BDBDBD;
   border-radius:5px;
@@ -758,7 +758,7 @@ SFS dark red = #9f2026; */
 <!--<img alt="Get over 6,200 dollars in Instant Savings on must-haves. Ends March 24th. While supplies last." src="sams-home-image.jpg" id="IMG_1" />-->  
 <h2 align="center" class="quizHeader">Take a Quiz!</h2>
   
-    <table style="width:583px" align="center" onClick=clearData();>
+    <table id="ques-table" style="width:583px" align="center" onClick=clearData();>
     <tr>
       <td>
         <div>
@@ -853,52 +853,62 @@ SFS dark red = #9f2026; */
     <div align="center" class="quizAnswers" id="correctAnswer4"></div>
 
 <!--show score upon submit-->
+    <br/>
+    <br/>
     <div>
         <h2 align="center" class="quizScore" id="userScore"></h2>
     </div>
     </div>
 
+    <script>
+        function postMsg() {
+            FB.ui(
+                  {
+                    method: 'share',
+                    href: "https://samsclub.com",
+                      quote: "Shop and play interesting games on Sams Club website. I just earned points playing it.",
+                      hashtag: "#playandearn"
+                  },
+                  // callback
+                  function(response) {
+                    if (response && !response.error_message) {
+                      alert('Posting completed.');
+                    } else {
+                      alert('Error while posting.');
+                    }
+                  }
+                );
+                }
+</script>
+
     <div id="shareIcons" hidden>
         <h3>Great job!! Do you want to let your friends know how well you did?</h3>
-        <div id="social-icons">
-            <h3>Share Now!!</h3>
-           
-<!--            <div id="fb-icon" class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-title="Sams club fun games" data-desc="Shop and play interesting games on Sams Club website. I just earned points playing it. #fun $play #earn #freegames" data-size="small"><a id="fb-link" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>-->
-
-            <script>
-                function postMsg() {
-                    FB.ui(
-                          {
-                            method: 'share',
-                            href: "https://samsclub.com",
-                              quote: "Shop and play interesting games on Sams Club website. I just earned points playing it.",
-                              hashtag: "#playandearn"
-                          },
-                          // callback
-                          function(response) {
-                            if (response && !response.error_message) {
-                              alert('Posting completed.');
-                            } else {
-                              alert('Error while posting.');
-                            }
-                          }
-                        );
-                        }
-            </script>
-            
-            <img id="fb-img" onClick=postMsg(); src="facebook-logo.png"/>
-            
-            <div id="twitter-icon">
-                <a href="https://twitter.com/intent/tweet?screen_name=TwitterDev&ref_src=twsrc%5Etfw" class="twitter-mention-button" data-text="Share &amp; Play Games @SamsClub. Check out all the games created by Sams Club and give your favourites a like to push them to victory! #contest #fun #share #play #games #freetoplay #earn #points #shop #redeem #samsclub" data-show-count="false">Tweet to @TwitterDev</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>    
-            </div>
-            
-            <div>
-            <img id="instagram-logo" src="instagram-logo.png"/>
-                </div>
-            <div>
-            <img id="pinterest-logo" src="pinterest.png"/>
-                </div>
+        <br/>
+        <div id="social-icons" margin-top="20px;">
+            <h3 style="color: blue">SHARE NOW</h3>
         </div>
+        <table>
+            <tr width="100%">
+                <td width="25%" align="center">
+                <img id="fb-img" onClick=postMsg(); src="facebook-logo.png"/>
+                    </td>
+                <td width="25%" align="center">
+                <div id="twitter-icon">
+                    <a href="https://twitter.com/intent/tweet?screen_name=TwitterDev&ref_src=twsrc%5Etfw" class="twitter-mention-button" data-text="Share &amp; Play Games @SamsClub. Check out all the games created by Sams Club and give your favourites a like to push them to victory! #contest #fun #share #play #games #freetoplay #earn #points #shop #redeem #samsclub" data-show-count="false">Tweet to @TwitterDev</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>    
+                </div>
+                    </td>
+                <td width="25%" align="center">
+                <div>
+                    <img id="instagram-logo" src="instagram-logo.png"/>
+                </div>
+                    </td>
+                <td width="25%" align="center">
+                <div>
+                    <img id="pinterest-logo" src="pinterest.png"/>
+                </div>
+                    </td>
+            </tr>
+        </table>
     </div>
 
 <footer id="FOOTER_1">
