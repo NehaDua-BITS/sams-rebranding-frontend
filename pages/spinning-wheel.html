@@ -53,11 +53,12 @@
     }        
         
     #twitter-icon {
-        margin: 25px 50px 15px 0px;
+        margin: 0px 10px 10px 0px;
+        height: 30px;
     }        
    
     #instagram-logo {
-        margin: 5px 10px 15px 0px;
+        margin: 0px 10px 10px 0px;
         height: 30px;
         width: 30px;
     }    
@@ -69,6 +70,7 @@
     }    
 
     #fb-img {
+        margin: 0px 10px 10px 0px;
         width: 80px;
         height: 30px;
     }
@@ -133,22 +135,33 @@
             }
     </script>
 
+    <center>
     <div id="shareIcons" style="position: relative; left: 100; top: 650px;" hidden>
-        <h3>Congratulations!! Challenge your friends and let them know you won. Also earn points on every share.</h3>
-
-        <img id="fb-img" onClick=postMsg(); src="facebook-logo.png"/>
-
-        <div id="twitter-icon">
-            <a href="https://twitter.com/intent/tweet?screen_name=TwitterDev&ref_src=twsrc%5Etfw" class="twitter-mention-button" data-text="Share &amp; Play Games @SamsClub. Check out all the games created by Sams Club and give your favourites a like to push them to victory! #contest #fun #share #play #games #freetoplay #earn #points #shop #redeem #samsclub" data-show-count="false">Tweet to @TwitterDev</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>    
-        </div>
-
-        <div>
-            <img id="instagram-logo" src="instagram-logo.png"/>
-        </div>
-        <div>
-            <img id="pinterest-logo" src="pinterest.png"/>
-        </div>
+        <h2>Congratulations!! Challenge your friends and let them know you won. Also earn points on every share.</h2>
+        <table>
+            <tr width="100%">
+                <td width="25%" align="center">
+                <img id="fb-img" onClick=postMsg(); src="facebook-logo.png"/>
+                    </td>
+                <td width="25%" align="center">
+                <div id="twitter-icon">
+                    <a href="https://twitter.com/intent/tweet?screen_name=TwitterDev&ref_src=twsrc%5Etfw" class="twitter-mention-button" data-text="Share &amp; Play Games @SamsClub. Check out all the games created by Sams Club and give your favourites a like to push them to victory! #contest #fun #share #play #games #freetoplay #earn #points #shop #redeem #samsclub" data-show-count="false">Tweet to @TwitterDev</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>    
+                </div>
+                    </td>
+                <td width="25%" align="center">
+                <div>
+                    <img id="instagram-logo" src="instagram-logo.png"/>
+                </div>
+                    </td>
+                <td width="25%" align="center">
+                <div>
+                    <img id="pinterest-logo" src="pinterest.png"/>
+                </div>
+                    </td>
+            </tr>
+        </table>
     </div>
+    </center>
     
     <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <script type="text/javascript" charset="utf-8">
