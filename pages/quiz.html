@@ -18,7 +18,7 @@
 #fb-icon {
     margin: 0px 10px 10px 0px;
 }        
-        }
+        
 #twitter-icon {
     margin: 25px 50px 15px 20px;
 }        
@@ -35,6 +35,11 @@
     width: 30px;
 }    
 
+#fb-img {
+    width: 80px;
+    height: 30px;
+}
+        
 p.question {
   font-family: Arial, sans-serif;
       font-size:20px;
@@ -753,7 +758,7 @@ SFS dark red = #9f2026; */
 <!--<img alt="Get over 6,200 dollars in Instant Savings on must-haves. Ends March 24th. While supplies last." src="sams-home-image.jpg" id="IMG_1" />-->  
 <h2 align="center" class="quizHeader">Take a Quiz!</h2>
   
-    <table style="width:583px" align="center">
+    <table style="width:583px" align="center" onClick=clearData();>
     <tr>
       <td>
         <div>
@@ -853,14 +858,40 @@ SFS dark red = #9f2026; */
     </div>
     </div>
 
-    <div id="share-msg">
+    <div id="shareIcons" hidden>
         <h3>Great job!! Do you want to let your friends know how well you did?</h3>
         <div id="social-icons">
             <h3>Share Now!!</h3>
-            <div id="fb-icon" class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-size="small"><a id="fb-link" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+           
+<!--            <div id="fb-icon" class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-title="Sams club fun games" data-desc="Shop and play interesting games on Sams Club website. I just earned points playing it. #fun $play #earn #freegames" data-size="small"><a id="fb-link" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>-->
+
+            <script>
+                function postMsg() {
+                    FB.ui(
+                          {
+                            method: 'share',
+                            href: "https://samsclub.com",
+                              quote: "Shop and play interesting games on Sams Club website. I just earned points playing it.",
+                              hashtag: "#playandearn"
+                          },
+                          // callback
+                          function(response) {
+                            if (response && !response.error_message) {
+                              alert('Posting completed.');
+                            } else {
+                              alert('Error while posting.');
+                            }
+                          }
+                        );
+                        }
+            </script>
+            
+            <img id="fb-img" onClick=postMsg(); src="facebook-logo.png"/>
+            
             <div id="twitter-icon">
-                <a href="https://twitter.com/intent/tweet?screen_name=TwitterDev&ref_src=twsrc%5Etfw" class="twitter-mention-button" data-show-count="false">Tweet to @TwitterDev</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>    
+                <a href="https://twitter.com/intent/tweet?screen_name=TwitterDev&ref_src=twsrc%5Etfw" class="twitter-mention-button" data-text="Share &amp; Play Games @SamsClub. Check out all the games created by Sams Club and give your favourites a like to push them to victory! #contest #fun #share #play #games #freetoplay #earn #points #shop #redeem #samsclub" data-show-count="false">Tweet to @TwitterDev</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>    
             </div>
+            
             <div>
             <img id="instagram-logo" src="instagram-logo.png"/>
                 </div>
@@ -1066,11 +1097,27 @@ SFS dark red = #9f2026; */
 
 
  <script>
+     
    // scripts here:
+     
+     function clearData() {
+         hideShareIcons();
+         document.getElementById('userScore').innerHTML = "";
+     }
+     
+    function showShareIcons() {
+        document.getElementById("shareIcons").hidden=false;
+    }
+
+    function hideShareIcons() {
+        document.getElementById("shareIcons").hidden=true;
+    }
 
     function submitQuiz() {
         console.log('submitted');
 
+        showShareIcons();
+        
     // get each answer score
         function answerScore (qName) {
             var radiosNo = document.getElementsByName(qName);

@@ -47,16 +47,107 @@
     width: 25%;     
     height: 20px;
     }
+   
+    #fb-icon {
+        margin: 0px 10px 10px 0px;
+    }        
+        
+    #twitter-icon {
+        margin: 25px 50px 15px 0px;
+    }        
+   
+    #instagram-logo {
+        margin: 5px 10px 15px 0px;
+        height: 30px;
+        width: 30px;
+    }    
+
+    #pinterest-logo {
+        margin: 0px 10px 10px 0px;
+        height: 30px;
+        width: 30px;
+    }    
+
+    #fb-img {
+        width: 80px;
+        height: 30px;
+    }
+
+        
     </style>
     
 </head>
 <body>
+    
+        <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId            : '563095470879387',
+            status : true, // check login status
+     cookie : true, // enable cookies to allow the server to access the session
+          autoLogAppEvents : true,
+          xfbml            : true,
+          version          : 'v3.2'
+        });
+      };
+    </script>
+    <script async defer src="https://connect.facebook.net/en_US/sdk.js"></script>
+
+        <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.2"></script>
+        <script>
+        (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=563095470879387&version=v2.0";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>   
+
     <div id="chart"></div>
     <div id="question"><h1></h1></div>
     <div style="position: relative; left: 100; top: 600px;">
         <label id="email-label">Enter you email id to receive your gift : </label>
         <input type="text" name="email" id="email-input" disabled/>
         <button id="email-submit" margin-left="30px" onclick="sendEmail()" disabled>Send</button>
+    </div>
+    
+    <script>
+    function postMsg() {
+        FB.ui(
+              {
+                method: 'share',
+                href: "https://samsclub.com",
+                  quote: "Shop and play interesting games on Sams Club website. I just earned points playing it.",
+                  hashtag: "#playandearn"
+              },
+              // callback
+              function(response) {
+                if (response && !response.error_message) {
+                  alert('Posting completed.');
+                } else {
+                  alert('Error while posting.');
+                }
+              }
+            );
+            }
+    </script>
+
+    <div id="shareIcons" style="position: relative; left: 100; top: 650px;" hidden>
+        <h3>Congratulations!! Challenge your friends and let them know you won. Also earn points on every share.</h3>
+
+        <img id="fb-img" onClick=postMsg(); src="facebook-logo.png"/>
+
+        <div id="twitter-icon">
+            <a href="https://twitter.com/intent/tweet?screen_name=TwitterDev&ref_src=twsrc%5Etfw" class="twitter-mention-button" data-text="Share &amp; Play Games @SamsClub. Check out all the games created by Sams Club and give your favourites a like to push them to victory! #contest #fun #share #play #games #freetoplay #earn #points #shop #redeem #samsclub" data-show-count="false">Tweet to @TwitterDev</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>    
+        </div>
+
+        <div>
+            <img id="instagram-logo" src="instagram-logo.png"/>
+        </div>
+        <div>
+            <img id="pinterest-logo" src="pinterest.png"/>
+        </div>
     </div>
     
     <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
@@ -155,6 +246,7 @@
         var show = false;
         function spin(d){
             disableEmailInput(true);
+            hideShareIcons();
             show = false;
             container.on("click", null);
             //all slices have been seen, all done
@@ -191,6 +283,7 @@
                 
                 if (data[picked].value != 2) {
                     disableEmailInput(false);
+                    showShareIcons();
                 }
                 
 //                d3.select("#question h1").text(data[picked].question).transition()
@@ -244,6 +337,14 @@
             .each("end", function() { if (show==true) blink(); })
         }
         
+        function showShareIcons() {
+            document.getElementById("shareIcons").hidden=false;
+        }
+
+        function hideShareIcons() {
+            document.getElementById("shareIcons").hidden=true;
+        }
+
         function disableEmailInput(disable)
         {
                 document.getElementById("email-input").disabled = disable;
@@ -270,7 +371,7 @@
             var offerWon = data[picked].question;
             console.log("email id : "+ emailId + " offerwon = " + offerWon);
             var request = new XMLHttpRequest();
-            request.open('POST', 'http://localhost:8080/email', true);
+            request.open('POST', 'http://localhost:8083/email', true);
             request.setRequestHeader('Access-Control-Allow-Origin', '*');
             request.setRequestHeader("Content-Type", "application/json");
             request.setRequestHeader('Access-Control-Allow-Methods','*');
