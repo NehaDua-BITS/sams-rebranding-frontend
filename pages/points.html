@@ -310,15 +310,15 @@
     <div style="text-align:center" id="POINTS DETAILS" class="tabcontent">
         <table id="customers">
             <tr>
-                <th>Date and Time</th>
-                <th>Point Type</th>
+                <th>Date</th>
+
                 <th>Points Amount</th>
             </tr>
-            <tr>
-                <td>21-03-2019 14:56:34</td>
+            <!--<tr>
+                <td>21-03-2019</td>
                 <td>Game Rewards</td>
                 <td>1$</td>
-            </tr>
+            </tr>-->
         </table>
         <br class="indent"></br>
         <h1 id="H3_1" style="text-align:center">
@@ -437,7 +437,7 @@
         
         getCoupons();
     </script>
-    
+
     <script>
         function updatePoints() {
             var points = localStorage.getItem("points");
@@ -449,6 +449,38 @@
         }
         updatePoints();
     </script>
+
+    <script>function updatePointsAmount(){
+     var points = localStorage.getItem("points");
+     appendPointsAmountRow(points);
+
+    }
+      // append row to the HTML table
+        function appendPointsAmountRow(cell1, cell2, cell3) {
+            var tbl = document.getElementById('customers'), // table reference
+                row = tbl.insertRow(tbl.rows.length),      // append table row
+                i;
+            var amt = (parseInt(cell1, 10)/20);
+
+                createPointsAmountCell(row.insertCell(0), "22-03-2019", 'row');
+                //createPointsAmountCell(row.insertCell(1), "Quiz Rewards", 'row');
+                createPointsAmountCell(row.insertCell(1), amt+"$", 'row');
+
+        }
+
+         // create DIV element and append to the table cell
+        function createPointsAmountCell(cell, text, style) {
+            var div = document.createElement('div'), // create DIV element
+                txt = document.createTextNode(text); // create text node
+            div.appendChild(txt);                    // append text node to the DIV
+            div.setAttribute('class', style);        // set DIV class attribute
+            div.setAttribute('className', style);    // set DIV class attribute for IE (?!)
+            cell.appendChild(div);                   // append DIV to the table cell
+        }
+
+        updatePointsAmount();
+    </script>
+
 </body>
 
 </html>
