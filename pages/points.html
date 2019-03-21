@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="points-page.css">
+    <style>
+        body {font-family: Arial;}
+         /* Style the tab */
+         .tab {
+         overflow: hidden;
+         border: 1px solid #ccc;
+         background-color: #f1f1f1;
+         }
+         /* Style the buttons inside the tab */
+         .tab button {
+         background-color: inherit;
+         float: left;
+         border: none;
+         outline: none;
+         cursor: pointer;
+         padding: 14px 16px;
+         transition: 0.3s;
+         font-size: 17px;
+         }
+         /* Change background color of buttons on hover */
+         .tab button:hover {
+         background-color: #ddd;
+         }
+         /* Create an active/current tablink class */
+         .tab button.active {
+         background-color: #ccc;
+         }
+         /* Style the tab content */
+         .tabcontent {
+         display: none;
+         padding: 6px 12px;
+         border: 1px solid #ccc;
+         border-top: none;
+         }
+         #customers {
+         font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+         border-collapse: collapse;
+         width: 100%;
+         }
+         #customers td, #customers th {
+         border: 1px solid #ddd;
+         padding: 8px;
+         }
+         #customers tr:nth-child(even){background-color: #f2f2f2;}
+         #customers tr:hover {background-color: #ddd;}
+         #customers th {
+         padding-top: 12px;
+         padding-bottom: 12px;
+         text-align: left;
+         background-color: #4CAF50;
+         color: white;
+         }
+         .dropbtn {
+         background-color: black;
+         color: white;
+         padding: 16px;
+         font-size: 16px;
+         border: none;
+         }
+         .dropdown {
+         position: relative;
+         display: inline-block;
+         }
+         .dropdown-content {
+         display: none;
+         position: absolute;
+         background-color: lightgrey;
+         min-width: 200px;
+         z-index: 1;
+         }
+         .dropdown-content a {
+         color: black;
+         padding: 12px 16px;
+         text-decoration: none;
+         display: block;
+         }
+         .dropdown-content a:hover {background-color: white;}
+         .dropdown:hover .dropdown-content {display: block;}
+         .dropdown:hover .dropbtn {background-color: grey;}
+         ul {
+         background: #808080;
+         list-style: none;
+         /* contain the list items */
+         overflow: hidden;
+         /*margin: 0 auto;
+         display: table;*/ /* ul will behave like a table now */
+         text-align: center;
+         }
+         ul li {
+         /* float: left; */
+         display: inline-block;
+         }
+         ul li a {
+         padding: 5px 10px;
+         background: #000;
+         color: #fff;
+         /*float: left;*/
+         /* some height would be nice */
+         line-height: 3em;
+         /* adjusting height */
+         display: block; /* or inline-block */
+         }
+         ul li a:hover {
+         background: #e4e4e4;
+         color: #333;
+         }
+         .center {
+         display: block;
+         margin-left: auto;
+         margin-right: auto;
+         width: 50%;
+         }
+         #DIV_1 {
+         box-sizing: border-box;
+         color: rgb(34, 34, 34);
+         height: 141px;
+         text-align: center;
+         text-decoration: none solid rgb(34, 34, 34);
+         text-size-adjust: 100%;
+         width: 667px;
+         perspective-origin: 333.5px 70.5px;
+         transform-origin: 333.5px 70.5px;
+         caret-color: rgb(34, 34, 34);
+         background: rgb(250, 250, 250) none repeat scroll 0% 0% / auto padding-box border-box;
+         border: 0px none rgb(34, 34, 34);
+         font: normal normal 400 normal 12px / 13.8px Arial, Helvetica, sans-serif;
+         outline: rgb(34, 34, 34) none 0px;
+         padding: 15px 0px;
+         }/*#DIV_1*/
+         #DIV_1:after {
+         box-sizing: border-box;
+         clear: both;
+         color: rgb(34, 34, 34);
+         content: '"' '"';
+         display: table;
+         height: 0px;
+         text-align: center;
+         text-decoration: none solid rgb(34, 34, 34);
+         text-size-adjust: 100%;
+         width: 0px;
+         perspective-origin: 0px 0px;
+         transform-origin: 0px 0px;
+         caret-color: rgb(34, 34, 34);
+         border: 0px none rgb(34, 34, 34);
+         font: normal normal 400 normal 12px / 13.8px Arial, Helvetica, sans-serif;
+         outline: rgb(34, 34, 34) none 0px;
+         }/*#DIV_1:after*/
+         #DIV_1:before {
+         box-sizing: border-box;
+         color: rgb(34, 34, 34);
+         content: '"' '"';
+         display: table;
+         height: 0px;
+         text-align: center;
+         text-decoration: none solid rgb(34, 34, 34);
+         text-size-adjust: 100%;
+         width: 0px;
+         perspective-origin: 0px 0px;
+         transform-origin: 0px 0px;
+         caret-color: rgb(34, 34, 34);
+         border: 0px none rgb(34, 34, 34);
+         font: normal normal 400 normal 12px / 13.8px Arial, Helvetica, sans-serif;
+         outline: rgb(34, 34, 34) none 0px;
+         }/*#DIV_1:before*/
+         #DIV_2 {
+         box-sizing: border-box;
+         color: rgb(34, 34, 34);
+         float: left;
+         height: 111px;
+         text-align: center;
+         text-decoration: none solid rgb(34, 34, 34);
+         text-size-adjust: 100%;
+         width: 333.5px;
+         perspective-origin: 166.75px 55.5px;
+         transform-origin: 166.75px 55.5px;
+         caret-color: rgb(34, 34, 34);
+         border-top: 0px none rgb(34, 34, 34);
+         border-right: 1px solid rgb(204, 204, 204);
+         border-bottom: 0px none rgb(34, 34, 34);
+         border-left: 0px none rgb(34, 34, 34);
+         font: normal normal 400 normal 12px / 13.8px Arial, Helvetica, sans-serif;
+         outline: rgb(34, 34, 34) none 0px;
+         padding: 12px 0px;
+         }/*#DIV_2*/
+         #DIV_2:after {
+         box-sizing: border-box;
+         color: rgb(34, 34, 34);
+         text-align: center;
+         text-decoration: none solid rgb(34, 34, 34);
+         text-size-adjust: 100%;
+         caret-color: rgb(34, 34, 34);
+         border: 0px none rgb(34, 34, 34);
+         font: normal normal 400 normal 12px / 13.8px Arial, Helvetica, sans-serif;
+         outline: rgb(34, 34, 34) none 0px;
+         }/*#DIV_2:after*/
+         #DIV_2:before {
+         box-sizing: border-box;
+         color: rgb(34, 34, 34);
+         text-align: center;
+         text-decoration: none solid rgb(34, 34, 34);
+         text-size-adjust: 100%;
+         caret-color: rgb(34, 34, 34);
+         border: 0px none rgb(34, 34, 34);
+         font: normal normal 400 normal 12px / 13.8px Arial, Helvetica, sans-serif;
+         outline: rgb(34, 34, 34) none 0px;
+         }/*#DIV_2:before*/
+         #DIV_3 {
+         box-sizing: border-box;
+         color: rgb(209, 0, 0);
+         height: 74px;
+         text-align: center;
+         text-decoration: none solid rgb(209, 0, 0);
+         text-size-adjust: 100%;
+         width: 332.5px;
+         perspective-origin: 166.25px 37px;
+         transform-origin: 166.25px 37px;
+         caret-color: rgb(209, 0, 0);
+         border: 0px none rgb(209, 0, 0);
+         font: normal normal 700 normal 64px / 74px Arial, Helvetica, sans-serif;
+         outline: rgb(209, 0, 0) none 0px;
+         }/*#DIV_3*/
+         #DIV_4 {
+         box-sizing: border-box;
+         color: rgb(34, 34, 34);
+         height: 13px;
+         text-align: center;
+         text-decoration: none solid rgb(34, 34, 34);
+         text-size-adjust: 100%;
+         width: 332.5px;
+         column-rule-color: rgb(34, 34, 34);
+         perspective-origin: 166.25px 6.5px;
+         transform-origin: 166.25px 6.5px;
+         caret-color: rgb(34, 34, 34);
+         border: 0px none rgb(34, 34, 34);
+         font: normal normal 400 normal 12px / 13.8px Arial, Helvetica, sans-serif;
+         outline: rgb(34, 34, 34) none 0px;
+         }/*#DIV_4*/
+         #DIV_4:after {
+         box-sizing: border-box;
+         color: rgb(34, 34, 34);
+         text-align: center;
+         text-decoration: none solid rgb(34, 34, 34);
+         text-size-adjust: 100%;
+         column-rule-color: rgb(34, 34, 34);
+         caret-color: rgb(34, 34, 34);
+         border: 0px none rgb(34, 34, 34);
+         font: normal normal 400 normal 12px / 13.8px Arial, Helvetica, sans-serif;
+         outline: rgb(34, 34, 34) none 0px;
+         }/*#DIV_4:after*/
+         #DIV_4:before {
+         box-sizing: border-box;
+         color: rgb(34, 34, 34);
+         text-align: center;
+         text-decoration: none solid rgb(34, 34, 34);
+         text-size-adjust: 100%;
+         column-rule-color: rgb(34, 34, 34);
+         caret-color: rgb(34, 34, 34);
+         border: 0px none rgb(34, 34, 34);
+         font: normal normal 400 normal 12px / 13.8px Arial, Helvetica, sans-serif;
+         outline: rgb(34, 34, 34) none 0px;
+         }/*#DIV_4:before*/
+    </style>
+    
+</head>
+
+<body>
+
+    <h1 id="H3_1" style="text-align:center">
+        My Points
+    </h1>
+    <div>
+        <div id="DIV_3" class="center">
+        </div>
+        <div id="DIV_4" class="center">
+            Total Points
+        </div>
+    </div>
+    <div class="tab">
+        <ul>
+            <li><span id="SPAN_2"><button class="tablinks" onclick="openCity(event, 'POINTS DETAILS')" id="defaultOpen">POINTS DETAILS</button></span></li>
+            <!--<li> <span id="SPAN_3"><button class="tablinks" onclick="openCity(event, 'EARN POINTS')">EARN POINTS</button></span></li>-->
+        </ul>
+    </div>
+    <div style="text-align:center" id="POINTS DETAILS" class="tabcontent">
+        <table id="customers">
+            <tr>
+                <th>Date and Time</th>
+                <th>Point Type</th>
+                <th>Points Amount</th>
+            </tr>
+            <tr>
+                <td>21-03-2019 14:56:34</td>
+                <td>Game Rewards</td>
+                <td>1$</td>
+            </tr>
+        </table>
+        <br class="indent"></br>
+        <h1 id="H3_1" style="text-align:center">
+            My Coupons
+        </h1>
+        <img class="center" src="coupon.jpeg" width="10" height="233">
+
+        <!--<div align="center" class="container">
+            <h2 style="text-align:center">
+                Kindly provide your Email to get the coupon.
+            </h2>
+            <center>
+                <form action="" method="post">
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" id="name" />
+                    <br></br>
+                    <label for="Email">Email:</label>
+                    <input type="text" name="email" id="email" />
+                    <br></br>
+                    <label for="Message">Message:</label><br />
+                    <textarea name="message" rows="2" cols="20" id="message"></textarea>
+                    <br></br>
+                    <input type="submit" name="submit" value="Submit" />
+                </form>
+            </center>
+        </div>-->
+    </div>
+    <!--<div id="EARN POINTS" class="tabcontent">
+        <h2 style="text-align:center">
+            Bonus Point Program - Share the GAME link to earn up to 100 bonus points.
+        </h2>
+        <div style="text-align:center">
+            <div class="dropdown">
+                <button class="dropbtn">Social Media</button>
+                <div class="dropdown-content">
+                    <a href="https://www.instagram.com">Instagram +30</a>
+                    <a href="https://www.facebook.com">Facebook +10</a>
+                    <a href="https://www.twitter.com">Twitter +5</a>
+                </div>
+            </div>
+            <br class="indent"></br>
+            <br class="indent"></br>
+            <br class="indent"></br>
+        </div>
+    </div>-->
+    <script>
+        function openCity(evt, cityName) {
+           var i, tabcontent, tablinks;
+           tabcontent = document.getElementsByClassName("tabcontent");
+           for (i = 0; i < tabcontent.length; i++) {
+             tabcontent[i].style.display = "none";
+           }
+           tablinks = document.getElementsByClassName("tablinks");
+           for (i = 0; i < tablinks.length; i++) {
+             tablinks[i].className = tablinks[i].className.replace(" active", "");
+           }
+           document.getElementById(cityName).style.display = "block";
+           evt.currentTarget.className += " active";
+         }
+         
+         // Get the element with id="defaultOpen" and click on it
+         document.getElementById("defaultOpen").click();
+    </script>
+    
+    <script>
+        function updatePoints() {
+            var points = localStorage.getItem("points");
+            if (points == null) {
+                points = 0;
+                localStorage.setItem("points", 0);
+            }
+            document.getElementById("DIV_3").innerHTML = points;
+        }
+        updatePoints();
+    </script>
+</body>
+
+</html>
