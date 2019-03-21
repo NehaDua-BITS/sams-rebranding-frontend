@@ -289,6 +289,26 @@
     outline: rgb(66, 66, 66) none 0px;
 }/*#UL_8:before*/
 
+#game_ad {
+    box-sizing: border-box;
+    color: rgb(66, 66, 66);
+    display: table;
+    float: left;
+    height: 100%;
+    text-decoration: none solid rgb(66, 66, 66);
+    text-size-adjust: 100%;
+    white-space: nowrap;
+    width: 100%;
+    column-rule-color: rgb(66, 66, 66);
+    perspective-origin: 27px 8px;
+    transform-origin: 27px 8px;
+    caret-color: rgb(66, 66, 66);
+    border: 0px none rgb(66, 66, 66);
+    font: normal normal 400 normal 12px / 18px aktiv-grotesk-std;
+    list-style: none outside none;
+    outline: rgb(66, 66, 66) none 0px; 
+}
+
 #LI_9 {
     box-sizing: border-box;
     color: rgb(66, 66, 66);
@@ -334,6 +354,38 @@
     list-style: none outside none;
     outline: rgb(66, 66, 66) none 0px;
 }/*#LI_9:before*/
+
+#game_link {
+    box-sizing: border-box;
+    color: rgb(66, 66, 66);
+    display: table-cell;
+    height: 16px;
+    text-align: center;
+    animation:flashingText 1s infinite;
+    animation-delay: 0.2s;
+    text-decoration: none solid rgb(66, 66, 66);
+    text-size-adjust: 100%;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: 54px;
+    column-rule-color: rgb(66, 66, 66);
+    perspective-origin: 27px 8px;
+    transform-origin: 27px 8px;
+    user-select: none;
+    caret-color: rgb(66, 66, 66);
+    border: 0px none rgb(66, 66, 66);
+    font: normal normal 400 normal 20px / 16px aktiv-grotesk-std;
+    list-style: none outside none;
+    outline: rgb(66, 66, 66) none 0px;
+}/*#A_10*/
+
+@keyframes flashingText{
+  0%   {color: red;}
+  25%  {color: #8e44ad;}
+  50%{    color: transparent; }
+  52%  {color: blue;}
+  100% {color: green;}
+}
 
 #A_10 {
     box-sizing: border-box;
