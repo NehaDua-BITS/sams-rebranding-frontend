@@ -857,6 +857,7 @@ SFS dark red = #9f2026; */
     <br/>
     <div>
         <h2 align="center" class="quizScore" id="userScore"></h2>
+        <h3 id="points-link" hidden>Check your points <a href="points.html" target="_blank" >here</a></h3>
     </div>
     </div>
 
@@ -1117,10 +1118,12 @@ SFS dark red = #9f2026; */
      
     function showShareIcons() {
         document.getElementById("shareIcons").hidden=false;
+        document.getElementById("points-link").hidden=false;
     }
 
     function hideShareIcons() {
         document.getElementById("shareIcons").hidden=true;
+        document.getElementById("points-link").hidden=true;
     }
 
     function submitQuiz() {
