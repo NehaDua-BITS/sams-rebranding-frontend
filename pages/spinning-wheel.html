@@ -368,6 +368,7 @@
         
         function sendEmail() {
             var emailId = document.getElementById("email-input").value;
+            localStorage.setItem("emailId", emailId);
             var offerWon = data[picked].question;
             console.log("email id : "+ emailId + " offerwon = " + offerWon);
             var request = new XMLHttpRequest();

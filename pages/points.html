@@ -56,6 +56,26 @@
          background-color: #4CAF50;
          color: white;
          }
+        
+         #coupons {
+         font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+         border-collapse: collapse;
+         width: 100%;
+         }
+         #coupons td, #coupons th {
+         border: 1px solid #ddd;
+         padding: 8px;
+         }
+         #coupons tr:nth-child(even){background-color: #f2f2f2;}
+         #coupons tr:hover {background-color: #ddd;}
+         #coupons th {
+         padding-top: 12px;
+         padding-bottom: 12px;
+         text-align: left;
+         background-color: #4CAF50;
+         color: white;
+         }
+
          .dropbtn {
          background-color: black;
          color: white;
@@ -304,6 +324,12 @@
         <h1 id="H3_1" style="text-align:center">
             My Coupons
         </h1>
+        <table id="coupons">
+            <tr>
+                <th>Coupon Description</th>
+                <th>Expiry Date</th>
+            </tr>
+        </table>
         <img class="center" src="coupon.jpeg" width="10" height="233">
 
         <!--<div align="center" class="container">
@@ -361,6 +387,56 @@
          
          // Get the element with id="defaultOpen" and click on it
          document.getElementById("defaultOpen").click();
+    </script>
+    
+    <script>
+        function getCoupons() {
+            var emailId = localStorage.getItem("emailId");
+            console.log("coupon for email id : "+ emailId);
+            var request = new XMLHttpRequest();
+            request.open('GET', 'http://localhost:8083/getCouponsForUser/'+emailId, true);
+            request.setRequestHeader('Access-Control-Allow-Origin', '*');
+            request.setRequestHeader("Content-Type", "application/json");
+            request.setRequestHeader('Access-Control-Allow-Methods','*');
+            request.setRequestHeader('Access-Control-Allow-Headers', '*');
+            request.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                     var couponsList = JSON.parse(this.responseText);
+                     for (var i = 0; i < couponsList.length; i++) {
+                         console.log(couponsList[i]["coupon"]);
+                         console.log(couponsList[i]["expiryDate"]);
+                         appendRow(couponsList[i]["coupon"], couponsList[i]["expiryDate"]);
+//                         document.getElementById("row_"+ (i+1)+ "_col_1").innerHTML=couponsList[i]["coupon"];
+//                         document.getElementById("row_"+ (i+1)+ "_col_2").innerHTML=couponsList[i]["expiryDate"];
+                     }
+                 }
+            };
+            request.send()
+        }
+        
+                // append row to the HTML table
+        function appendRow(cell1, cell2) {
+            var tbl = document.getElementById('coupons'), // table reference
+                row = tbl.insertRow(tbl.rows.length),      // append table row
+                i;
+            // insert table cells to the new row
+            //for (i = 0; i < tbl.rows[0].cells.length; i++) {
+                createCell(row.insertCell(0), cell1, 'row');
+                createCell(row.insertCell(1), cell2, 'row');
+            //}
+        }
+
+        // create DIV element and append to the table cell
+        function createCell(cell, text, style) {
+            var div = document.createElement('div'), // create DIV element
+                txt = document.createTextNode(text); // create text node
+            div.appendChild(txt);                    // append text node to the DIV
+            div.setAttribute('class', style);        // set DIV class attribute
+            div.setAttribute('className', style);    // set DIV class attribute for IE (?!)
+            cell.appendChild(div);                   // append DIV to the table cell
+        }
+        
+        getCoupons();
     </script>
     
     <script>
